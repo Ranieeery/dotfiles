@@ -43,6 +43,10 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+git config --global user.name "Ranieeery"
+git config --global user.email "raniery2003@hotmail.com"
+git config --global init.defaultBranch main
+
 # Install (nerd) fonts
 sudo mv *.ttf /usr/share/fonts/ttf/
 sudo fc-cache -f -v
