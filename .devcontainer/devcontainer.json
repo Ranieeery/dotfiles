@@ -1,0 +1,17 @@
+{
+    "name": "",
+    "image": "",
+    "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+    "postCreateCommand": "bash .devcontainer/post-create.sh",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "zsh"
+        },
+        "extensions": [
+          
+        ]
+      }
+    }
+  }
+  
