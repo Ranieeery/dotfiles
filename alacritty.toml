@@ -1,0 +1,10 @@
+# Font Config
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
+[font]
+normal = { family = "JetBrainsMono NF", style = "Regular" }
+bold = { family = "JetBrainsMono NF", style = "Bold" }
+italic = { family = "JetBrainsMono NF", style = "Italic" }
+
+[terminal]
