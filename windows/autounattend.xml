@@ -15,7 +15,7 @@
 		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
 			<UserData>
 				<ProductKey>
-					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key>
+					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key> <!-- Its a generic key lol -->
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
 			</UserData>
