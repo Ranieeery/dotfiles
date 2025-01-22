@@ -30,6 +30,7 @@ npm -v # should print `10.9.0`
 choco upgrade chocolatey
 choco install mpv
 choco update
+choco install ffmpeg
 
 # Need to install Python
 
