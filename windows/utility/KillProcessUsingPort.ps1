@@ -8,3 +8,5 @@ taskkill /PID 2660 /F
 # with npm kill-port
 
 npx kill-port 8080
+
+sudo netstat -abno
