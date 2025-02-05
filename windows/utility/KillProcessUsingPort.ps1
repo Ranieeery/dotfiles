@@ -10,3 +10,8 @@ taskkill /PID 2660 /F
 npx kill-port 8080
 
 sudo netstat -abno
+
+# -a shows all connections and listening ports.
+# -b shows the executable responsible for each connection or listening port.
+# -n shows the IP address and port numbers numerically.
+# -o shows the process ID for each connection or listening port.
