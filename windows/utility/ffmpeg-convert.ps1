@@ -9,3 +9,6 @@ ffmpeg -i input.mp4 -vn -c:a libmp3lame -q:a 0 output.mp3
 
 # Resize image scale
 ffmpeg -i input.png -vf "scale=iw/2:ih/2" output.png
+
+# Cut video in HH:MM:SS format
+ffmpeg -i input.mp4 -t 00:00:02 output.mp4
