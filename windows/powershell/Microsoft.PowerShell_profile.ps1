@@ -21,6 +21,13 @@ function gcl {
   git clone $url
 }
 
+function gcp {
+  param ([string]$msg)
+  git add .
+  git commit -m $msg
+  git push
+}
+
 function ytd {
   param (
     [Parameter(Mandatory = $true)]
