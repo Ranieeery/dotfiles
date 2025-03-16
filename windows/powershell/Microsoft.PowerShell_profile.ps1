@@ -17,6 +17,23 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 function gcl {
-    param ([string]$url)
-    git clone $url
+  param ([string]$url)
+  git clone $url
+}
+
+function ytd {
+  param (
+    [Parameter(Mandatory = $true)]
+    [string]$url,
+  
+    [Parameter(Mandatory = $false)]
+    [string]$outputDir
+  )
+
+  if ($outputDir) {
+    yt-dlp -f bestvideo+bestaudio/best -N 5 -o "$outputDir/%(title)s.%(ext)s" $url
+  }
+  else {
+    yt-dlp -f bestvideo+bestaudio/best -N 5 $url
+  }
 }
