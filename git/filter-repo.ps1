@@ -8,7 +8,7 @@ git pull "path/here" temp-branch
 git remote add origin "linktorepo.git"
 git push -u origin main
 
-Set-Location "firstpath"
+Set-Location "original/path"
 git branch -D temp-branch
 
 git filter-repo --invert-paths --path "path/here"
