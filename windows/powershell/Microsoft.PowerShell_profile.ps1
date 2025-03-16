@@ -22,11 +22,28 @@ function gcl {
 }
 
 function gcp {
-  param ([string]$msg)
+  param (
+    [Parameter(Position=0)]
+    [string]$msg,
+    
+    [Parameter()]
+    [switch]$p
+  )
+  
   git add .
+  
+  if ([string]::IsNullOrEmpty($msg)) {
+    $timestamp = Get-Date -Format "dd/MM/yyyy HH:mm:ss"
+    $msg = "autocommit: update with default message at $timestamp"
+  }
+  
   git commit -m $msg
-  git push
+  
+  if ($p) {
+    git push
+  }
 }
+
 
 function ytd {
   param (
