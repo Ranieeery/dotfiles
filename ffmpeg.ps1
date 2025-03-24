@@ -18,3 +18,13 @@ ffmpeg -i input.mp4 -t 00:00:02 output.mp4
 
 # Reduce resolution from 4k to 1080p
 ffmpeg -i input.mp4 -vf "scale=1920:1080" -c:v libx264 -crf 23 -preset slow -c:a copy output.mp4
+
+# Reduce video size
+ffmpeg -i "input.mp4" `
+  -c:v libx264 `
+  -b:v 1360k `
+  -crf 23 `
+  -preset slow `
+  -c:a aac `
+  -b:a 64k `
+  "output.mp4"
