@@ -4,33 +4,26 @@ New-Item -Path $PROFILE -Type File -Force
 notepad $PROFILE
 
 winget install --id Microsoft.Powershell --source winget
-winget install --id Microsoft.Powershell.Preview --source winget
 
 winget install Microsoft.PowerToys --source winget
 
 winget install yt-dlp
 yt-dlp --update
 
-# Need to install Node.js (Contains choco)
-# installs fnm (Fast Node Manager)
+# Node.js
+
 winget install Schniz.fnm
 
-# configure fnm environment
+fnm install --latest
 fnm env --use-on-cd | Out-String | Invoke-Expression
 
-# download and install Node.js
-fnm use --install-if-missing 22
+# Choco and MPV
 
-# verifies the right Node.js version is in the environment
-node -v # should print `v22.11.0`
-
-# verifies the right npm version is in the environment
-npm -v # should print `10.9.0`
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 choco upgrade chocolatey
 choco install mpv
 choco update
-choco install ffmpeg
 
 # Need to install Python
 
