@@ -23,6 +23,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 choco upgrade chocolatey
 choco install mpv
+choco install bitwarden
 choco update
 
 # Need to install Python
