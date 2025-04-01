@@ -22,7 +22,7 @@ fnm env --use-on-cd | Out-String | Invoke-Expression
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 choco upgrade chocolatey
-choco install mpv
+choco install mpvio
 choco install bitwarden
 choco update
 
