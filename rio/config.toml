@@ -3,6 +3,8 @@ confirm-before-quit = false
 padding-x = 10
 padding-y = [5, 5]
 
+# theme = "dracula"
+
 # Colors (One Half Dark)
 
 [cursor]
@@ -23,7 +25,7 @@ yellow = '#E5C07B'
 blue = '#61AFEF'
 magenta = '#C678DD'
 cyan = '#56B6C2'
-white = '#DCDFE4'
+white = '#64666A'
 
 # Dim colors
 dim-black = '#282C34'
@@ -33,7 +35,7 @@ dim-yellow = '#E5C07B'
 dim-blue = '#61AFEF'
 dim-magenta = '#C678DD'
 dim-cyan = '#56B6C2'
-dim-white = '#DCDFE4'
+dim-white = '#64666A'
 
 # Light colors
 light-black = '#282C34'
@@ -46,7 +48,7 @@ light-cyan = '#56B6C2'
 light-white = '#DCDFE4'
 
 [fonts]
-size = 14
+size = 15
 features = []
 symbol-map = []
 
@@ -77,6 +79,3 @@ args = ["-l"]
 [platform]
 windows.shell.program = "pwsh"
 windows.shell.args = ["-l"]
-
-[style]
-theme = "tokyonight"
