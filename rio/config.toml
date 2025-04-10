@@ -1,7 +1,9 @@
 confirm-before-quit = false
 
 padding-x = 10
-padding-y = [5, 5]
+padding-y = [0, 5]
+
+working-dir = 'C:\Users\ranie'
 
 # theme = "dracula"
 
@@ -16,6 +18,9 @@ blinking-interval = 600
 background = '#282C34'
 foreground = '#DCDFE4'
 
+selection-background = "#DCDFE4"
+selection-foreground = "#282C34"
+
 cursor = '#A3B3CC'
 
 black = '#282c34'
@@ -25,7 +30,7 @@ yellow = '#E5C07B'
 blue = '#61AFEF'
 magenta = '#C678DD'
 cyan = '#56B6C2'
-white = '#64666A'
+white = '#DCDFE4'
 
 # Dim colors
 dim-black = '#282C34'
@@ -35,7 +40,7 @@ dim-yellow = '#E5C07B'
 dim-blue = '#61AFEF'
 dim-magenta = '#C678DD'
 dim-cyan = '#56B6C2'
-dim-white = '#64666A'
+dim-white = '#DCDFE4'
 
 # Light colors
 light-black = '#282C34'
@@ -79,3 +84,22 @@ args = ["-l"]
 [platform]
 windows.shell.program = "pwsh"
 windows.shell.args = ["-l"]
+
+[navigation]
+use-split = true
+
+[window]
+opacity = 0.9
+blur = true
+windows-corner-preference = "Round"
+
+width = 900
+height = 400
+
+[bindings]
+keys = [
+  { key = "right", with = "alt | shift", action = "SplitRight" },
+  { key = "down", with = "alt | shift", action = "SplitDown" },
+  { key = "right", with = "alt", action = "SelectNextSplit" },
+  { key = "left", with = "alt", action = "SelectPrevSplit" },
+]
