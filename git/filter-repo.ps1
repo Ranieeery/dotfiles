@@ -1,17 +1,15 @@
-git rev-parse --git-dir
-git subtree split -P "path/here" -b temp-branch
-New-Item "C:\path\to\repo"
-Set-Location "C:\path\to\repo"
+git clone --no-local E:/Projects/CloneRepo clonerepo-temp
+cd clonerepo-temp
 
-git init
-git pull "path/here" temp-branch
-git remote add origin "linktorepo.git"
-git push -u origin main
+git filter-repo --to-subdirectory-filter NewDirName
 
-Set-Location "original/path"
-git branch -D temp-branch
+cd E:/Projects/MainRepo
+git remote add clonerepo ../clonerepo-temp
+git fetch clonerepo
+git rebase clonerepo/main --allow-unrelated-histories
 
-git filter-repo --invert-paths --path "path/here"
-git push origin --force
+git remote remove clonerepo
+cd ..
+rm -r -Force clonerepo-temp
 
 # git push --set-upstream origin main --force
