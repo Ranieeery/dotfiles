@@ -26,6 +26,10 @@ choco install mpvio
 choco install bitwarden
 choco update
 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+scoop bucket add extras
+
 # Need to install Python
 
 pip install spotdl

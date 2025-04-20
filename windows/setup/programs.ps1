@@ -11,6 +11,7 @@ winget install -e --id Brave.Brave
 winget install -e --id Discord.Discord
 winget install -e --id qBittorrent.qBittorrent
 winget install -e --id RustDesk.RustDesk
+scoop install kavita
 
 # Study
 
