@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro} % i like this one
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter} % another good one
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+ 
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Raniery Meireles Goulart} \\ \vspace{1pt}
+    \small +55 (31) 9 9197-4503 $|$ \href{mailto:raniery2003@hotmail.com}{\underline{raniery2003@hotmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/ranierygoulart/}{\underline{linkedin.com/in/ranierygoulart}} $|$
+    \href{https://github.com/Ranieeery}{\underline{github.com/Ranieeery}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+{Back-end developer specialized in Java and JavaScript/TypeScript, with solid experience in frameworks such as Spring Boot, Hibernate, Spring Data JPA and Spring Security (JWT). Extensive knowledge in building and integrating RESTful APIs as well as proficiency in messaging systems (RabbitMQ, Apache Kafka). Seeking a position where I can apply and expand my skills, contributing with my experience in developing robust, scalable, and efficient solutions.}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer}{March 2025 -- Present}
+      {Engineering}{São Paulo, SP - Brazil (Remote)}
+      \resumeItemListStart
+        \resumeItem{Developed Go REST APIs for migrating legacy services to microservice architectures and supported related Java/Spring Boot components}
+        \resumeItem{Migrated applications to cloud using Kubernetes for container orchestration and Kong as API Gateway}
+        \resumeItem{Implemented Go templates and data validation for JSON requests, ensuring consistency and reliability in requests between
+        systems}
+        \resumeItem{Optimized CI/CD processes with containerization practices and automated deployment scripts in GitLab}
+        \resumeItem{Integrated diverse internal systems using gRPC, HTTP, and messaging protocols; utilized Grafana for service monitoring}
+      \resumeItemListEnd
+      {Tags: Java, Spring Boot, Go, Kubernetes, API Gateway (Kong), gRPC, REST APIs, SOAP, Messaging, JSON, Grafana, CI/CD, GitLab}
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Development Intern}{August 2023 -- March 2025}
+      {Empresa 1}{Belo Horizonte, MG - Brazil (Remote)}
+      \resumeItemListStart
+        \resumeItem{Collaborated on the migration of a legacy C++ application to web using Spring Framework and AngularJS}
+        \resumeItem{Designed and optimized SQL database queries for relational databases, reducing response time by 30\%}
+        \resumeItem{Automated builds with Maven and managed database migrations with Liquibase, ensuring consistent CI/CD}
+        \resumeItem{Worked in agile squads (Scrum), contributing to sprints, backlog refinement, and daily meetings for iterative, demand-driven deliveries}
+    \resumeItemListEnd
+    {Tags: Java, JavaScript, AngularJS, Spring Framework, Hibernate, Oracle, SQL, Wildfly, Agile, Scrum, C++}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, JavaScript, TypeScript, Go, Python, SQL, C++, Shell} \\
+     \textbf{Front-end}{: Next.Js, React, AngularJS, Tailwind CSS, Bootstrap} \\
+     \textbf{Back-end}{: Spring Boot, Spring Data JPA, Spring Webflux, Hibernate, Node.Js, Prisma, Fiber} \\
+     \textbf{Databases}{: MySQL, PostgreSQL, Oracle, SQLite, H2, MongoDB, Redis} \\
+     \textbf{Developer Tools}{:  Docker, Git, GitHub, GitLab, Grafana, Flyway, Liquibase, Linux, Kubernetes, AWS (EC2, Lambda, S3, EFS, RDS, DynamoDB, VPC)}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{MovieFlix} $|$ \emph{Java, Spring Boot, Postgres, Swagger, Flyway, JWT}}{May 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a comprehensive movie catalog API with JWT authentication and role-based access control}
+            \resumeItem{Implemented complete CRUD operations for movies, categories, and streaming platforms with Spring Data JPA}
+            \resumeItem{Designed a secure authentication system using JWT tokens and BCrypt password encryption}
+            \resumeItem{Created an organized database schema with Flyway migrations for version control and easy deployment}
+            \resumeItem{Documented API endpoints using SpringDoc OpenAPI/Swagger for improved developer experience}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Dev register} $|$ \emph{Java, Spring Boot, PostgreSQL, JWT, Flyway, Swagger}}{Apr 2025 -- May 2025}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented a RESTful API for managing developers, their skills, and project tasks}
+            \resumeItem{Integrated JWT authentication to secure endpoints and manage user access}
+            \resumeItem{Utilized PostgreSQL and Flyway for robust data persistence and versioned database migrations}
+            \resumeItem{Developed comprehensive data models for developers, tasks, and users with validation and exception handling}
+            \resumeItem{Documented the API using OpenAPI/Swagger for easy integration and testing}
+            \resumeItem{Applied modern software engineering practices, including DTOs, soft deletes, and layered architecture}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Centro Universitário União das Américas Descomplica}{Belo Horizonte, MG - Brazil}
+      {Bachelor in Computer Science}{Jan. 2023 -- Dec 2026}
+    \resumeSubheading
+      {Centro Federal de Educação Tecnológica de Minas Gerais}{Contagem, MG - Brazil}
+      {Technical in Electro-electronics}{Feb. 2018 -- Mar 2021}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATES-----------
+\section{Certificates}
+{Stellantis Education Award; AWS Academy Cloud Architecting; AWS Academy Cloud Foundations; Oracle Next Education F2 T4 Back-end; Python, Data Science on OCI and Oracle Analytics Training; EF SET English Certificate (B2 Upper Intermediate); Java Foundations; ChatGPT Prompt Engineering for Developers}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+{Advanced English (B2 Upper EFSET, C2 Reading – C1 Writing)} \\
+{Native Portuguese}
+
+ 
+%-------------------------------------------
+\end{document}.
+
