@@ -17,6 +17,7 @@ mkfs.fat -F32 /dev/sda1  # EFI
 mkswap /dev/sdX2         # swap
 swapon /dev/sdX2         # Ativa a swap imediatamente
 
+mkfs.ext4 /dev/sdX3
 mount /dev/sdX3 /mnt
 mount --mkdir /dev/sdX1 /mnt/boot/efi
 
