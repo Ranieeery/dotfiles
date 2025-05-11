@@ -17,13 +17,28 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 function gcl {
-  param ([string]$url)
+  param (
+    [Parameter(Position = 0)]
+    [string]$url,
+    
+    [Parameter()]
+    [switch]$c
+  )
+
   git clone $url
+  $dir = Split-Path $url -LeafBase
+    
+  if ($c) {
+    code $dir
+  }
+  else {
+    Set-Location $dir
+  }
 }
 
 function gcp {
   param (
-    [Parameter(Position=0)]
+    [Parameter(Position = 0)]
     [string]$msg,
     
     [Parameter()]
@@ -44,16 +59,15 @@ function gcp {
   }
 }
 
-
 function ytd {
   param (
     [Parameter(Mandatory = $true)]
     [string]$url,
-  
+    
     [Parameter(Mandatory = $false)]
     [string]$outputDir
   )
-
+  
   if ($outputDir) {
     yt-dlp -f bestvideo+bestaudio/best -N 5 -o "$outputDir/%(title)s.%(ext)s" $url
   }
