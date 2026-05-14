@@ -1,8 +1,4 @@
-oh-my-posh init pwsh | Invoke-Expression
-oh-my-posh init pwsh --config 'C:\Users\ranie\OneDrive\Documents\PowerShell\pararussel.omp.json' | Invoke-Expression
-
-## oh-my-posh init pwsh --config 'pure' | Invoke-Expression
-## "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/pararussel.omp.json
+oh-my-posh init pwsh --config 'pure' | Invoke-Expression
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
 
@@ -17,28 +13,27 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 function gcl {
-  param (
-    [Parameter(Position = 0)]
+    param (
+    [Parameter(Position=0)]
     [string]$url,
     
     [Parameter()]
     [switch]$c
-  )
+    )
 
-  git clone $url
-  $dir = Split-Path $url -LeafBase
+    git clone $url
+    $dir = Split-Path $url -LeafBase
     
-  if ($c) {
-    code $dir
-  }
-  else {
-    Set-Location $dir
-  }
+    if ($c) {
+      code $dir
+    } else {
+      Set-Location $dir
+    }
 }
 
 function gcp {
   param (
-    [Parameter(Position = 0)]
+    [Parameter(Position=0)]
     [string]$msg,
     
     [Parameter()]
@@ -61,35 +56,33 @@ function gcp {
 
 function ytd {
   param (
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory=$true)]
     [string]$url,
     
-    [Parameter(Mandatory = $false)]
+    [Parameter(Mandatory=$false)]
     [string]$outputDir
   )
   
   if ($outputDir) {
     yt-dlp -f bestvideo+bestaudio/best -N 5 -o "$outputDir/%(title)s.%(ext)s" $url
-  }
-  else {
+  } else {
     yt-dlp -f bestvideo+bestaudio/best -N 5 $url
   }
 }
 
 function ytd-audio {
   param (
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory=$true)]
     [string[]]$urls,
 
-    [Parameter(Mandatory = $false)]
+    [Parameter(Mandatory=$false)]
     [string]$outputDir
   )
 
   foreach ($url in $urls) {
     if ($outputDir) {
       yt-dlp -x --audio-format mp3 -o "$outputDir/%(title)s.%(ext)s" $url
-    }
-    else {
+    } else {
       yt-dlp -x --audio-format mp3 $url
     }
   }
