@@ -4,6 +4,7 @@ apt-get install git
 git config --global user.name "Ranieeery"
 git config --global user.email "raniery2003@hotmail.com"
 git config --global init.defaultBranch main
+git config --global core.autocrlf false
 
 ssh-keygen -t ed25519 -C "raniery2003@hotmail.com"
 
