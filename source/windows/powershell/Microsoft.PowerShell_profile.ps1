@@ -31,7 +31,7 @@ function gcl {
     }
 }
 
-function gcp {
+function gitc {
   param (
     [Parameter(Position=0)]
     [string]$msg,
@@ -52,6 +52,13 @@ function gcp {
   if ($p) {
     git push
   }
+}
+
+function gitcmain {
+  $branch = git rev-parse --abbrev-ref HEAD
+  git checkout main
+  git pull
+  git branch -d $branch 
 }
 
 function ytd {
